@@ -1,32 +1,16 @@
 .loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  height: 100px;
-}
-
-.loader span {
-  width: 12px;
-  height: 12px;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #ccc;
+  border-top-color: #4fa94d;
   border-radius: 50%;
-  background-color: green;
-  animation: blink 1.2s infinite ease-in-out;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+  margin-top: 30px;
 }
-
-.loader span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.loader span:nth-child(3) {
-  animation-delay: 0.4s;
-}
-@keyframes blink {
-  0%, 80%, 100% {
-    opacity: 0.3;
-  }
-  40% {
-    opacity: 1;
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 .hidden {
